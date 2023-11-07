@@ -1,24 +1,177 @@
 
-import { expect, test } from "./node_modules/vitest";
-import { sum } from './sum.js'
+import { addTask, deleteTask, markAllAsDone} from './sum.js'
+import { describe, it , expect } from "./node_modules/vitest";
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toEqual(3)
+
+// ------------- test addTask 
+
+describe ('Add a new task', () =>{
+
+  it('can not to add an empty task', () => {
+
+    const tasks = [];
+
+    const obj = {
+      name: "call Anne",
+      task: {
+        label: " ",
+        done: false
+      }
+  }
+
+  
+  expect(() => addTask(obj, tasks)).toThrowError()
+
+
+  })
+
+  it('have to add a new task in the array', () => {
+
+    const tasks = [];
+
+    const obj = {
+        name: "call Anne",
+        task: {
+          label: "call Anne this friday",
+          done: false
+        }
+    }
+
+    addTask(obj, tasks);
+    expect(tasks.length > 0).toBe(true)
+
+    // console.log(tasks);
+
+  })
 })
 
 
-// test addTask 
 
-let label = "";
-let done; 
+// ------------- test deleteTask 
+
+describe ('Delete the task', () =>{
+
+  it('have to delete the task from array', () => {
+
+    const tasks = [
+    {
+      name: "call Anne",
+      task: {
+        label: "call Anne this friday",
+        done: false
+      }
+    },
+    {
+      name: "contact Jordan",
+      task: {
+        label: "send invatation to Jordan for lunch ",
+        done: false
+      }
+    },
+    ];
 
 
-test('return a new task', () =>{
+    const taskToDalete = {
+      name: "call Anne",
+      task: {
+        label: "call Anne this friday",
+        done: false
+      }
+    }
 
-  expect("hello").toBe("hello")
+    deleteTask(tasks, taskToDalete)
+
+    expect(tasks.includes(taskToDalete)).toBe(false)
+    // expect(deleteTask(tasks, taskToDalete)).toEqual(tasks)
+
+
+  })
+
 })
 
-// describe = pour dex=scription
-// it = 
+
+// test markAllAsDone
+
+describe ('Mark all the labels as done', () =>{
+
+  it('have mark all labels as done', () => {
+
+    const tasks = [
+    {
+      name: "call Anne",
+      task: {
+        label: "call Anne this friday",
+        done: false
+      }
+    },
+    {
+      name: "contact Jordan",
+      task: {
+        label: "send invatation to Jordan for lunch ",
+        done: false
+      }
+    },
+
+    ];
+
+    const arr = markAllAsDone(tasks)
+
+
+    expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
+
+  })
+
+})
+
+
+// test markAsDone
+
+describe ('Mark the labels as done', () =>{
+
+  it('have mark labels as done', () => {
+
+    const tasks = [
+    {
+      name: "call Anne",
+      task: {
+        label: "call Anne this friday",
+        done: false
+      }
+    },
+    {
+      name: "contact Jordan",
+      task: {
+        label: "send invatation to Jordan for lunch ",
+        done: false
+      }
+    },
+
+    ];
+
+
+    const taskAsDone = {
+      name: "call Anne",
+      task: {
+        label: "call Anne this friday",
+        done: false
+      }
+    }
+
+
+    const arr = markAllAsDone(tasks, taskAsDone)
+
+    
+    expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
+
+  })
+
+})
+
+
+
+
+
+
+
 
 
