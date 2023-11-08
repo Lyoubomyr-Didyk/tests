@@ -126,9 +126,9 @@ describe ('Mark all the labels as done', () =>{
 
 // test markAsDone
 
-describe ('Mark the labels as done', () =>{
+describe ('Mark the label as done', () =>{
 
-  it('have mark labels as done', () => {
+  it('have mark label as done', () => {
 
     const tasks = [
     {

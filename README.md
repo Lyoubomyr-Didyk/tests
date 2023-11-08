@@ -24,6 +24,8 @@ Decouper son code;
 
 ----------------------------------------------------------------------------------------
 
+## vitest
+
 run vitest  => npx vitest
 
 детальний розгляд синтаксису тестування з використанням Jest, включаючи it та expect:
@@ -45,3 +47,25 @@ run vitest  => npx vitest
         toThrow(expected): Перевірка, що функція генерує виключення, яке співпадає з очікуваним.
 
         Ще є багато інших методів для різних типів перевірок.
+
+## Coverage test
+
+Un "coverage test" (ou "test de couverture" en français) est une technique utilisée dans le domaine du développement logiciel pour évaluer dans quelle mesure le code source d'un programme est testé par des tests automatisés. L'objectif principal de cette pratique est de mesurer la "couverture" des tests, c'est-à-dire combien de parties du code sont exécutées par les tests. Un code bien testé devrait idéalement avoir une couverture élevée, ce qui signifie que la plupart, voire la totalité, de ses lignes de code sont exécutées au moins une fois par les tests. Un code non testé ou insuffisamment testé aura une couverture faible, laissant des zones de code non vérifiées et potentiellement sujettes à des erreurs.
+
+Il existe plusieurs types de couverture de test, notamment :
+
+- La couverture de ligne : Elle mesure quelles lignes de code ont été exécutées par les tests.
+
+- La couverture de branche : Elle mesure quelles branches de contrôle (par exemple, les conditions if/else) ont été testées.
+
+- La couverture de décision : Elle est similaire à la couverture de branche, mais elle se concentre sur la prise de décision au niveau de chaque condition.
+
+- La couverture de chemin : Elle vise à tester tous les chemins possibles à travers le code.
+
+"Istanbul" est un outil de couverture de code largement utilisé dans l'écosystème JavaScript, principalement pour Node.js et les applications Web. Il peut être utilisé pour mesurer la couverture de code de vos tests JavaScript, qu'il s'agisse de tests unitaires, de tests d'intégration ou de tests fonctionnels. Istanbul prend en charge la couverture de ligne, la couverture de branche, la couverture de décision et la couverture de chemin.
+
+Lorsque vous exécutez vos tests à l'aide d'Istanbul, il génère des rapports détaillés indiquant quelles parties de votre code ont été testées et quelles parties restent non testées. Cela vous aide à identifier les zones de votre code qui nécessitent une attention particulière en matière de tests.
+
+Les outils d'analyse de la couverture, comme Istanbul, sont essentiels pour s'assurer que votre code est robuste et fiable, car ils vous aident à identifier les zones non testées qui pourraient potentiellement provoquer des erreurs ou des bogues. Cela vous permet d'améliorer la qualité de votre code et d'augmenter la confiance dans sa stabilité.
+
+## Automatisation des tests 
