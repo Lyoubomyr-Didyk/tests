@@ -42,10 +42,13 @@ function markAllAsDone (arr) {
 // markAsDone
 
 function markAsDone (arr, taskAsDone) {
- 
-  return arr.map((item)=> {
-    item.task.done = true
-    return item;
+
+   arr.find((item)=> {
+    const isFound = item.name === taskAsDone.name;
+    if(isFound){
+     item.task.done = true;
+    }
+  
   })
 }
 

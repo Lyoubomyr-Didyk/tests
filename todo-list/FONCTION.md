@@ -1,5 +1,6 @@
 Le cahier de tests est un document qui regroupe tous les points qui vous permettent de déterminer si votre application, site, ou d’autres services numériques correspondent bien à ce qui était attendu.
 
+
 Comment rédiger un cahier de test ?
 
 - Nom du test :  Le titre qui décrit la fonctionnalité à tester..
@@ -27,10 +28,17 @@ ID du test:             1;
 Objectif :              ajouter un element dans le tableau;
 Conditions préalables : 
 Configurations :
-Étapes de test :        je reçois un parametre et je push dans le tableau;
+Étapes de test :        je reçois un parametre une tâche et je pusse dans le tableau;
 Résultat attendu :      presence d'un element dans le tableau;
 
 
+Nom du test :           can't add an empty task;
+ID du test:             11;
+Objectif :              input n'est pas valide si il'est vide;
+Conditions préalables : 
+Configurations :
+Étapes de test :        je reçois en parametre une tâche, je le controle;
+Résultat attendu :      si input non valide leve une errore;
 
 
 2. deleteTask => 
@@ -41,10 +49,8 @@ Objectif :              supprimer un element de tableau;
 Conditions préalables : existance d'element dans le tableau;
 Configurations :
 Étapes de test :        recevoir en parametre id d'element et le supprimer de tableau;
-Résultat attendu :      element est supprimé de tableau;
-
-
-
+Résultat attendu 
+:      element est supprimé de tableau;
 
 3. modifyTask => 
 

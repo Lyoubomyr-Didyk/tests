@@ -1,5 +1,5 @@
 
-import { addTask, deleteTask, markAllAsDone} from './sum.js'
+import { addTask, deleteTask, markAllAsDone, markAsDone} from './sum.js'
 import { describe, it , expect } from "../node_modules/vitest";
 
 
@@ -26,7 +26,6 @@ describe ('Add a new task', () =>{
   })
 
   it('have to add a new task in the array', () => {
-
     const tasks = [];
 
     const obj = {
@@ -38,7 +37,7 @@ describe ('Add a new task', () =>{
     }
 
     addTask(obj, tasks);
-    expect(tasks.length > 0).toBe(true)
+    expect(tasks.length > 0).toBe(true)   // containes
 
     // console.log(tasks);
 
@@ -117,11 +116,13 @@ describe ('Mark all the labels as done', () =>{
     const arr = markAllAsDone(tasks)
 
 
-    expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
+    expect(arr.every(item => item.task.done === true)).toBe(true)
 
   })
 
 })
+
+
 
 
 // test markAsDone
@@ -150,19 +151,28 @@ describe ('Mark all the labels as done', () =>{
 
 
 //     const taskAsDone = {
-//       name: "call Anne",
+//       name: "contact Jordan",
 //       task: {
 //         label: "call Anne this friday",
 //         done: false
 //       }
 //     }
 
+//     markAsDone(tasks, taskAsDone)
 
-//     const arr = markAllAsDone(tasks, taskAsDone)
+//     console.log(tasks);
 
     
-//     expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
+    
+//     expect(tasks.find(item => {
+//       if(item.name === taskAsDone.name){
+       
 
+//         console.log( item.task.done);
+//         return item.task.done;
+//       }
+
+//     })).toBe(true);
 //   })
 
 // })
