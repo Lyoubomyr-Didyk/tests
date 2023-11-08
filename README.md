@@ -1,52 +1,61 @@
 # Tests 
 
-Selon-vous, qu’est-ce un test ?
+> Selon-vous, qu’est-ce un test ?
 
-Un moyenne pour savoir si une fonctionalité fonction;
-Tester une aplication;
+ - Un moyenne pour savoir si une fonctionalité fonction;
 
-À quoi servent les tests ?
+> À quoi servent les tests ?
 
-Teste differant methodes, fonction pour eviter tous les error;
-
-
-Y a-t-il plusieurs types de tests ? Si oui, quelle est leur différence ?
-
-Test unitaire;       (test cote server)
-Test de performance; (light house);
-Test fonctionnel;    (tester un bloc d'une fonctionalite)
-Test end to end;     (test cote interface)
-
-Intuitivement, à quelles bonnes pratiques de conception de tests, vous pouvez penser ?
-
-Decouper son code;
+- Teste differant methodes, fonction pour eviter tous les errors;
 
 
-----------------------------------------------------------------------------------------
+> Y a-t-il plusieurs types de tests ? Si oui, quelle est leur différence ?
 
-## vitest
+- Test unitaire;       (test cote server)
+- Test de performance; (light house);
+- Test fonctionnel;    (tester un bloc d'une fonctionalite)
+- Test end to end;     (test cote interface)
+
+> Intuitivement, à quelles bonnes pratiques de conception de tests, vous pouvez penser ?
+
+- Decouper son code;
+
+
+<img src="./img/tests.png" alt="tests" width="400"/>
+
+
+<hr>
+
+
+## Vitest
+
+
+Vitest est un framework de test d’unités JavaScript. Il a été créé pour compléter Vite, un outil pour aider à gérer et à construire des applications Web basées sur JavaScript.
 
 run vitest  => npx vitest
 
-детальний розгляд синтаксису тестування з використанням Jest, включаючи it та expect:
 
-    it(description, testFunction): Функція it (або test, це синоніми) використовується для створення окремого тест-кейсу. Вона приймає два параметри:
 
-        description: Це описовий рядок, який пояснює, що тест робить. Цей рядок відображається під час виконання тестів і допомагає зрозуміти, що саме перевіряється в тесті.
 
-        testFunction: Це функція, яка містить логіку тесту. У цій функції ви визначаєте кроки тестування та викликаєте функцію expect для перевірки результату.
+it(description, testFunction): Функція it (або test, це синоніми) використовується для створення окремого тест-кейсу. Вона приймає два параметри:
 
-    expect(value): Функція expect приймає значення, яке ви хочете перевірити, і повертає об'єкт "expectation". Цей об'єкт містить методи для визначення очікуваного результату. Найпоширеніші методи включають:
+description: Це описовий рядок, який пояснює, що тест робить. Цей рядок відображається під час виконання тестів і допомагає зрозуміти, що саме перевіряється в тесті.
 
-        toBe(expected): Перевірка, чи значення рівне очікуваному значенню.
+testFunction: Це функція, яка містить логіку тесту. У цій функції ви визначаєте кроки тестування та викликаєте функцію expect для перевірки результату.
 
-        toEqual(expected): Перевірка на глибоку рівність об'єктів.
+expect(value): Функція expect приймає значення, яке ви хочете перевірити, і повертає об'єкт "expectation". Цей об'єкт містить методи для визначення очікуваного результату. 
 
-        not.toBe(expected): Перевірка, що значення не рівне очікуваному значенню.
+Найпоширеніші методи включають:
 
-        toThrow(expected): Перевірка, що функція генерує виключення, яке співпадає з очікуваним.
+    - toBe(expected): Перевірка, чи значення рівне очікуваному значенню.
 
-        Ще є багато інших методів для різних типів перевірок.
+    - toEqual(expected): Перевірка на глибоку рівність об'єктів.
+
+    - not.toBe(expected): Перевірка, що значення не рівне очікуваному значенню.
+
+    - toThrow(expected): Перевірка, що функція генерує виключення, яке співпадає з     
+      очікуваним.
+
 
 ## Coverage test
 
@@ -69,3 +78,5 @@ Lorsque vous exécutez vos tests à l'aide d'Istanbul, il génère des rapports 
 Les outils d'analyse de la couverture, comme Istanbul, sont essentiels pour s'assurer que votre code est robuste et fiable, car ils vous aident à identifier les zones non testées qui pourraient potentiellement provoquer des erreurs ou des bogues. Cela vous permet d'améliorer la qualité de votre code et d'augmenter la confiance dans sa stabilité.
 
 ## Automatisation des tests 
+
+https://doka.guide/tools/github-actions/
