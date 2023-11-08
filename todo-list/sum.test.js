@@ -1,6 +1,6 @@
 
 import { addTask, deleteTask, markAllAsDone} from './sum.js'
-import { describe, it , expect } from "./node_modules/vitest";
+import { describe, it , expect } from "../node_modules/vitest";
 
 
 // ------------- test addTask 
