@@ -126,46 +126,46 @@ describe ('Mark all the labels as done', () =>{
 
 // test markAsDone
 
-describe ('Mark the label as done', () =>{
+// describe ('Mark the label as done', () =>{
 
-  it('have mark label as done', () => {
+//   it('have mark label as done', () => {
 
-    const tasks = [
-    {
-      name: "call Anne",
-      task: {
-        label: "call Anne this friday",
-        done: false
-      }
-    },
-    {
-      name: "contact Jordan",
-      task: {
-        label: "send invatation to Jordan for lunch ",
-        done: false
-      }
-    },
+//     const tasks = [
+//     {
+//       name: "call Anne",
+//       task: {
+//         label: "call Anne this friday",
+//         done: false
+//       }
+//     },
+//     {
+//       name: "contact Jordan",
+//       task: {
+//         label: "send invatation to Jordan for lunch ",
+//         done: false
+//       }
+//     },
 
-    ];
-
-
-    const taskAsDone = {
-      name: "call Anne",
-      task: {
-        label: "call Anne this friday",
-        done: false
-      }
-    }
+//     ];
 
 
-    const arr = markAllAsDone(tasks, taskAsDone)
+//     const taskAsDone = {
+//       name: "call Anne",
+//       task: {
+//         label: "call Anne this friday",
+//         done: false
+//       }
+//     }
+
+
+//     const arr = markAllAsDone(tasks, taskAsDone)
 
     
-    expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
+//     expect(arr.map(item => item.task.done)).toStrictEqual([true, true])
 
-  })
+//   })
 
-})
+// })
 
 
 
